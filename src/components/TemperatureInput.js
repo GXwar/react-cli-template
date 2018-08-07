@@ -15,13 +15,6 @@ class TemperatureInput extends React.Component {
     this.props.onTemperatureChange(e.target.value);
   }
 
-  componentWillMount() {
-    console.log('component will mount');
-    console.log(this.props);
-  }
-
-  
-
   render() {
     const temperature = this.props.temperature;
     const scale = this.props.scale;

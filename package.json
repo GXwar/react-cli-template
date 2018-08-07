@@ -6,7 +6,9 @@
   "scripts": {
     "clear": "rimraf dist",
     "open": "opener http://localhost:8080",
-    "server": "webpack-dev-server --config build/webpack.config.js --mode development --open"
+    "build": "webpack --config build/webpack.pord.config.js",
+    "dev": "webpack-dev-server --config build/webpack.dev.config.js",
+    "server": "webpack-dev-server --devtool eval --progress --colors --hot --config build/webpack.dev.config.js --mode development"
   },
   "keywords": [],
   "author": "",
@@ -16,6 +18,7 @@
     "babel-loader": "^7.1.5",
     "babel-preset-env": "^1.7.0",
     "babel-preset-react": "^6.24.1",
+    "clean-webpack-plugin": "^0.1.19",
     "file-loader": "^1.1.11",
     "html-webpack-plugin": "^3.2.0",
     "http-proxy-middleware": "^0.18.0",
@@ -29,6 +32,7 @@
     "webpack-merge": "^4.1.4"
   },
   "dependencies": {
+    "axios": "^0.18.0",
     "react": "^16.4.2",
     "react-dom": "^16.4.2"
   }
