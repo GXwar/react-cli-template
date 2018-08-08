@@ -1,7 +1,13 @@
 import React from 'react';
 
-function App(props) {
-  return <h1>Hello, {props.name}</h1>;
+import Header from './views/Header/index.js';
+
+class App extends React.Component {
+  render() {
+    return (
+      <Header/>
+    )
+  }
 }
 
 export default App;
