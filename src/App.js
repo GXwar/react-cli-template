@@ -1,11 +1,15 @@
-import React from 'react';
+import React, { Component } from 'react';
 
-import Calculator from './components/Calculator.js';
+import Effect from './components/Effect.js';
+import Router from './Router.js';
 
-class App extends React.Component {
+class App extends Component {
   render() {
     return (
-      <Calculator/>
+      <div className="app">
+        <p>React-cli-template</p>
+        <Router/>
+      </div>
     )
   }
 }

@@ -1,4 +1,5 @@
 import React from 'react';
+import axios from 'axios';
 
 class Clock extends React.Component {
   constructor(props) {
@@ -6,12 +7,20 @@ class Clock extends React.Component {
     this.state = {
       date: new Date()
     };
+    this.test.bind(this);
   }
 
   componentDidMount() {
     this.timer = setInterval(() => {
       this.tick();
     }, 1000);
+    axios.get('/api/todolist')
+      .then(res => {
+        console.log(res);
+      })
+      .catch(err => [
+        console.log(err)
+      ])
   }
   componentWillUnmount() {
     clearInterval(this.timer);
@@ -21,10 +30,15 @@ class Clock extends React.Component {
       date: new Date()
     });
   }
+
+  test() {
+    console.log(this.refs.title)
+  }
+
   render() {
     return (
       <div>
-        <h1>Hello, world</h1>
+        <h1 ref="title" onClick={this.test}>Hello, world</h1>
         <h2>It is {this.state.date.toLocaleTimeString()}.</h2>
       </div>
     );
