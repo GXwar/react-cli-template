@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
 const scaleNames = {
   c: 'Celsius',
@@ -7,6 +8,8 @@ const scaleNames = {
 
 class TemperatureInput extends React.Component {
   constructor(props) {
+    // Once the states or the props in Component change, the Render function will execute
+    // When a Component's Render function executes, all its children components will execute
     super(props);
     this.handleChange = this.handleChange.bind(this);
   }
@@ -16,8 +19,7 @@ class TemperatureInput extends React.Component {
   }
 
   render() {
-    const temperature = this.props.temperature;
-    const scale = this.props.scale;
+    const { temperature, scale} = this.props;
     return (
       <fieldset>
         <legend>Enter temperature in {scaleNames[scale]}</legend>
@@ -25,6 +27,16 @@ class TemperatureInput extends React.Component {
       </fieldset>
     )
   }
+}
+
+TemperatureInput.propTypes = {
+  temperature: PropTypes.string.isRequired,
+  onTemperatureChange: PropTypes.func.isRequired,
+}
+
+TemperatureInput.defaultProps = {
+  temperature: '100',
+  onTemperatureChange: () => {}
 }
 
 export default TemperatureInput;

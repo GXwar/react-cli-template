@@ -1,11 +1,11 @@
 import React from 'react';
 
-import Header from './views/Header/index.js';
+import Calculator from './components/Calculator.js';
 
 class App extends React.Component {
   render() {
     return (
-      <Header/>
+      <Calculator/>
     )
   }
 }
