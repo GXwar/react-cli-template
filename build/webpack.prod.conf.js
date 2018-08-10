@@ -5,7 +5,7 @@ module.exports = merge(baseWebpackConfig, {
   mode: 'production',
   plugins: [
     new HtmlWebpackPlugin({
-      template: path.join(__dirname, '../src/assets/template/index.html'),
+      template: path.join(__dirname, '../public/index.html'),
       hash: true,
       minify: {
         removeComments: true,

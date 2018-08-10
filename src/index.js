@@ -3,7 +3,9 @@ import ReactDOM from 'react-dom';
 
 import App from './app.js';
 
-import './styles/reset.js';
+// Style Files
+import './styles/reset.scss';
+import './styles/style.css'
 
 ReactDOM.render(
   <App/>,
