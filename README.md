@@ -1,3 +1,10 @@
 # React-Cli-Template
 
-a simple React and Webpack4 Configuration.
+A Simple React and Webpack4 Configuration.
+
+## Usage
+
+```
+npm run build
+npm start
+```

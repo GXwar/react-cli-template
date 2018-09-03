@@ -5,7 +5,7 @@ import App from './app.js';
 
 // Style Files
 import './styles/reset.scss';
-import './styles/style.css'
+import './styles/app.scss';
 
 ReactDOM.render(
   <App/>,

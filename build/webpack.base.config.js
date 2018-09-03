@@ -33,6 +33,10 @@ module.exports = {
         test: /\.(png|jpg)$/,
         loader: 'url-loader'
       },
+      {
+        test: /\.(woff|woff2|eot|ttf|svg)$/,
+        loader: 'url-loader'
+      }
     ]
   },
   optimization: {
